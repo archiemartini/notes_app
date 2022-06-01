@@ -13,6 +13,7 @@ class NotesView {
       noteEl.innerText = note; 
       noteEl.className = 'note';
       this.mainContainerEl.append(noteEl)
+      
     })
   }
 }

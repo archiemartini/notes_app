@@ -20,6 +20,9 @@ describe('The NotesView class', () => {
     const view = new NotesView(mockedModel)
 
     view.displayNotes()
-    expect(document.querySelectorAll('div-note').length).toBe(2)
+    const noteElements = document.querySelectorAll('div.note')
+    expect(noteElements.length).toBe(2)
+    expect(noteElements[0].innerText).toBe('One, two - testing')
   })
+  
 })
