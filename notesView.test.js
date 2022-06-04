@@ -37,4 +37,16 @@ describe('Notes View', () => {
     expect(document.querySelectorAll('div.note').length).toEqual(1);
     expect(document.querySelectorAll('div.note')[0].innerText).toEqual('My new amazing test note');
   });
+  it('does not display same notes when DisplayNotes it is called twice', () => {
+    document.body.innerHTML = fs.readFileSync('./index.html');
+  
+    const model = new NotesModel();
+    model.addNote('Testy test')
+    const view = new NotesView(model);
+
+    view.displayNotes()
+    view.displayNotes()
+
+    expect(document.querySelectorAll('div.note').length).toEqual(1)
+  })
 });
