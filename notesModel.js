@@ -11,6 +11,10 @@ class NotesModel {
    this.items.push(item) 
   }
 
+  setNotes(notes) {
+    this.items = notes
+  }
+
   reset() {
     this.items = []
   }

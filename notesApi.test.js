@@ -13,8 +13,11 @@ describe('Notes class', () => {
     fetch.mockResponseOnce(JSON.stringify(["This note is coming from the server"]))
     
     api.loadNotes((noteData) => {
-      expect(noteData).toEqual(["This note is coming from the server"])
+      expect(noteData).toStrictEqual(["This note is coming from the server"])
     })
+  })
+  it('calls a fetch POST request to create a new note', () => {
+    
   })
   
 })

@@ -1,6 +1,7 @@
 class notesView {
-  constructor(notesModel) {
+  constructor(notesModel, notesApi) {
     this.model = notesModel
+    this.notesApi = notesApi
     this.mainContainerElement = document.querySelector('#main-container')
     
     document.querySelector('#add-note-button').addEventListener('click', () => {
@@ -33,5 +34,7 @@ class notesView {
     this.displayNotes();
   }
 }
+
+
 
 module.exports = notesView;
