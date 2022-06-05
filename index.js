@@ -12,8 +12,3 @@ api.loadNotes((notes) => {
   model.setNotes(notes);
   view.displayNotes();
 });
-
-api.createNote("This is my added note", (notes) => {
-  model.setNotes(notes);
-  view.displayNotes()
-})

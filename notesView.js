@@ -16,7 +16,7 @@ class notesView {
     document.querySelectorAll('.note').forEach(element => {
       element.remove()
     })
-    //then returns to the display
+    //then returns to displaying
     document.query
     const notes = this.model.getNotes();
     notes.forEach((note) => {
@@ -30,8 +30,11 @@ class notesView {
   }
 
   addNewNote(newNote) {
-    this.model.addNote(newNote);
-    this.displayNotes();
+    this.notesApi.createNote(newNote, (notes) => {
+      this.model.setNotes(notes)
+    })
+    this.displayNotes()
+    
   }
 }
 
