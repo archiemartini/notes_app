@@ -17,7 +17,8 @@ describe('Notes class', () => {
     })
   })
   it('calls a fetch POST request to create a new note', () => {
-    
+    const api = new NotesApi()
+
   })
   
 })

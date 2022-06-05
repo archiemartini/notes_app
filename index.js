@@ -7,8 +7,13 @@ const model = new NotesModel();
 const view = new NotesView(model, api);
 
 api.loadNotes((notes) => {
-  // This method is new — you'll need to add it to the model class
+  
   console.log(notes)
   model.setNotes(notes);
   view.displayNotes();
 });
+
+api.createNote("This is my added note", (notes) => {
+  model.setNotes(notes);
+  view.displayNotes()
+})
